@@ -1,0 +1,210 @@
+// Typography resets
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+// Paragraphs
+p {
+  font-size: inherit;
+  line-height: @paragraph-lineheight;
+  margin-bottom: @paragraph-margin-bottom;
+  text-rendering: @paragraph-text-rendering;
+}
+
+// Emphasized text
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+// Strong text
+strong,
+b {
+  font-weight: 700;
+  line-height: inherit;
+}
+
+// Small text
+small {
+  font-size: @small-font-size;
+  line-height: inherit;
+}
+
+// Headings
+h1,
+h2 {
+  color: @header-color;
+  font-family: @header-font-family;
+  letter-spacing: 1.5px;
+  line-height: @header-lineheight;
+  margin-bottom: @header-margin-bottom;
+  margin-top: 0;
+  text-rendering: @header-text-rendering;
+  small {
+    color: @header-small-font-color;
+    line-height: 0;
+  }
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: @anchor-color;
+  line-height: 1;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  @media (min-width: 768px) {
+    font-size: 80px;
+  }
+
+}
+
+// Links
+a {
+  color: @anchor-color;
+  text-decoration: @anchor-text-decoration;
+  line-height: inherit;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: @anchor-color-hover;
+  }
+
+  img {
+    border: 0;
+  }
+}
+
+// Horizontal rule
+hr {
+  max-width: @global-width;
+  height: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid @medium-gray;
+  border-left: 0;
+  margin: 1rem auto;
+  clear: both;
+}
+
+// Lists
+ul,
+ol,
+dl {
+  margin-bottom: @paragraph-margin-bottom;
+}
+
+// List items
+li {
+  font-size: inherit;
+}
+
+// Unordered lists
+ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+}
+
+// Ordered lists
+ol {
+  margin-left: 1.25rem;
+}
+
+// Nested unordered/ordered lists
+ul, ol {
+  & & {
+    margin-left: 1.25rem;
+    margin-bottom: 0;
+  }
+}
+
+.soclink {
+  list-style: none;
+  display: flex;
+  &__item {
+    &__link {
+      padding: 5px 10px;
+    }
+  }
+}
+
+// Definition lists
+dl {
+  margin-bottom: 1rem;
+
+  dt {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 1px solid @medium-gray;
+  margin: 0 0 @paragraph-margin-bottom;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+
+  &, p {
+    line-height: @paragraph-lineheight;
+    color: @dark-gray;
+  }
+}
+
+// Citations
+cite {
+  color: @dark-gray;
+  display: block;
+  font-size: 0.82rem;;
+
+  &:before {
+    content: '\2014 \0020';
+  }
+}
+
+// Abbreviations
+abbr {
+  color: @global-font-color;
+  cursor: help;
+  border-bottom: 1px dotted @black;
+}
+
+// Code
+code {
+  background-color: @light-gray;
+  border: 1px solid @medium-gray;
+  font-family: @font-family-monospace;
+  font-weight: 400;
+  color: @black;
+  padding: 0.125rem 0.3125rem 0.0625rem;
+}
+
+// Keystrokes
+kbd {
+  background-color: @light-gray;
+  color: @black;
+  font-family: @font-family-monospace;
+  margin: 0;
+  padding: 0.125rem 0.25rem 0;
+}
