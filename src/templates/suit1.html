@@ -1,4 +1,4 @@
-
+{% set title = "Olena Boichuk Designer" %}
 
 <!doctype html>
 <html lang="en">
@@ -14,7 +14,7 @@
   </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Olena Boichuk Designer</title>
+  <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
   <meta name="description" content="Olena Boichuk, Designer, Snowboard Suits, Ski Suits">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-status-bar-style" content="#504e4e">
